@@ -122,13 +122,13 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <configuration>
                     <includes>
-                        <include>com/example/starter/**</include>
+                        <include>com/example/**</include>
                     </includes>
                     <excludes>
-                        <exclude>com/example/starter/*Test</exclude>
-                        <exclude>com/example/starter/*Test$*</exclude>
-                        <exclude>com/example/starter/*IT</exclude>
-                        <exclude>com/example/starter/*IT$*</exclude>
+                        <exclude>com/example/**/*Test</exclude>
+                        <exclude>com/example/**/*Test$*</exclude>
+                        <exclude>com/example/**/*IT</exclude>
+                        <exclude>com/example/**/*IT$*</exclude>
                     </excludes>
                 </configuration>
             </plugin>
