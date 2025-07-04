@@ -120,6 +120,17 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>com/example/starter/**</include>
+                    </includes>
+                    <excludes>
+                        <exclude>com/example/starter/**/*Test</exclude>
+                        <exclude>com/example/starter/**/*Test$*</exclude>
+                        <exclude>com/example/starter/**/*IT</exclude>
+                        <exclude>com/example/starter/**/*IT$*</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
