@@ -32,20 +32,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(ArquillianExtension.class)
 @ArquillianSuiteDeployment
 class StarterIT {
-    /**
-     * Maximum size for random numbers used in tests.
-     */
-    public static final int MAXSIZE = 100;
-
     @Test
     void sanityCheck() {
         assertThat(true).isTrue();
     }
 
     @Test
-    void testCalculator() {
-        int a = (int) (Math.random() * MAXSIZE) + 1;
-        int b = (int) (Math.random() * MAXSIZE) + 1;
+    @SuppressWarnings("checkstyle:MagicNumber")
+    void calcBasicFunc() {
+        int a = (int) (Math.random() * 100) + 1;
+        int b = (int) (Math.random() * 100) + 1;
         Calculator calculator = new Calculator();
         assertThat(calculator.add(a, b)).isEqualTo(a + b);
         assertThat(calculator.subtract(a, b)).isEqualTo(a - b);

@@ -1,5 +1,10 @@
 package com.example.starter;
 
+/**
+ * A simple calculator class that provides basic arithmetic operations.
+ * This class can be used to perform addition, subtraction, multiplication,
+ * and division of two integers.
+ */
 public class Calculator {
     public int add(int a, int b) {
         return a + b;
