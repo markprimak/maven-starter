@@ -125,10 +125,10 @@
                         <include>com/example/starter/**</include>
                     </includes>
                     <excludes>
-                        <exclude>com/example/starter/**/*Test</exclude>
-                        <exclude>com/example/starter/**/*Test$*</exclude>
-                        <exclude>com/example/starter/**/*IT</exclude>
-                        <exclude>com/example/starter/**/*IT$*</exclude>
+                        <exclude>com/example/starter/*Test</exclude>
+                        <exclude>com/example/starter/*Test$*</exclude>
+                        <exclude>com/example/starter/*IT</exclude>
+                        <exclude>com/example/starter/*IT$*</exclude>
                     </excludes>
                 </configuration>
             </plugin>
