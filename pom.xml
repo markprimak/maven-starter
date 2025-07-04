@@ -5,24 +5,25 @@
     <groupId>com.example</groupId>
     <artifactId>starter</artifactId>
     <version>1.x-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <name>Starter Project</name>
 
     <parent>
         <groupId>com.flowlogix</groupId>
         <artifactId>payara-pom</artifactId>
-        <version>57</version>
+        <version>60</version>
     </parent>
 
     <properties>
         <!-- Override target java release -->
         <!-- <maven.compiler.release>24</maven.compiler.release> -->
-        <flowlogix.depchain.version>64</flowlogix.depchain.version>
+        <flowlogix.depchain.version>69</flowlogix.depchain.version>
         <flowlogix.version>9.0.10</flowlogix.version>
         <arquillian.graphene.version>3.0.0-alpha.4</arquillian.graphene.version>
         <arquillian.payara.version>3.1</arquillian.payara.version>
-        <checkstyle.supressionsLocation>${basedir}/src/checkstyle/suppressions.xml</checkstyle.supressionsLocation>
-        <checkstyle.headerLocation>${basedir}/src/checkstyle/apache-header.txt</checkstyle.headerLocation>
+        <checkstyle.suppressionsLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/suppressions.xml</checkstyle.suppressionsLocation>
+        <checkstyle.headerLocation>${maven.multiModuleProjectDirectory}/src/checkstyle/apache-header.txt</checkstyle.headerLocation>
         <!-- Turn off maven build cache -->
         <!-- <maven.build.cache.enabled>false</maven.build.cache.enabled> -->
         <!-- Turn on console logging for tests -->
@@ -70,7 +71,7 @@
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>4.0.6</version>
+            <version>4.0.7</version>
             <scope>provided</scope>
         </dependency>
 
@@ -107,7 +108,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-bom</artifactId>
-                <version>4.33.0</version>
+                <version>4.34.0</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
