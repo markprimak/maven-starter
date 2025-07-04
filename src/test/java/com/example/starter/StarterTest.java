@@ -1,7 +1,8 @@
 package com.example.starter;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import static org.assertj.core.api.Assertions.*;
 
 class StarterTest {
     @Test
@@ -14,5 +15,8 @@ class StarterTest {
         assertThat(calculator.subtract(a, b)).isEqualTo(a - b);
         assertThat(calculator.multiply(a, b)).isEqualTo(a * b);
         assertThat(calculator.divide(a, b)).isEqualTo(a / b);
+        assertThatThrownBy(() -> calculator.divide(a, 0))
+            .isInstanceOf(IllegalArgumentException.class)
+            .hasMessage("Division by zero is not allowed.");
     }
 }
