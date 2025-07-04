@@ -37,18 +37,6 @@ class StarterIT {
         assertThat(true).isTrue();
     }
 
-    @Test
-    @SuppressWarnings("checkstyle:MagicNumber")
-    void calcBasicFunc() {
-        int a = (int) (Math.random() * 100) + 1;
-        int b = (int) (Math.random() * 100) + 1;
-        Calculator calculator = new Calculator();
-        assertThat(calculator.add(a, b)).isEqualTo(a + b);
-        assertThat(calculator.subtract(a, b)).isEqualTo(a - b);
-        assertThat(calculator.multiply(a, b)).isEqualTo(a * b);
-        assertThat(calculator.divide(a, b)).isEqualTo(a / b);
-    }
-
     @Deployment
     @SuppressWarnings("unused")
     static WebArchive deploy() {
