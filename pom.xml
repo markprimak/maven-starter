@@ -126,10 +126,10 @@
                     </includes>
                     <!-- ignore tests and ITs - too much coverage noise -->
                     <excludes>
-                        <exclude>com/example/starter/**/*Test</exclude>
-                        <exclude>com/example/starter/**/*Test$*</exclude>
-                        <exclude>com/example/starter/**/*IT</exclude>
-                        <exclude>com/example/starter/**/*IT$*</exclude>
+                        <exclude>com/example/**/*Test</exclude>
+                        <exclude>com/example/**/*Test$*</exclude>
+                        <exclude>com/example/**/*IT</exclude>
+                        <exclude>com/example/**/*IT$*</exclude>
                     </excludes>
                 </configuration>
             </plugin>
