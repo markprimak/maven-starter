@@ -41,6 +41,7 @@ class StarterIT {
 
     @Test
     @Disabled("Disabled to check coverage")
+    @SuppressWarnings("checkstyle:MagicNumber")
     void add() {
         var random = new Random();
         int a = random.nextInt() * 100 + 1;
