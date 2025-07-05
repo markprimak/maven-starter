@@ -39,6 +39,7 @@ class StarterIT {
     Calculator calculator;
 
     @Test
+    @SuppressWarnings("checkstyle:MagicNumber")
     void subtract() {
         var random = new Random();
         int a = random.nextInt(1, 1000);
