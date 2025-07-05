@@ -11,8 +11,8 @@ class StarterTest {
     @SuppressWarnings("checkstyle:MagicNumber")
     void calcBasicFunc() {
         var random = new Random();
-        int a = random.nextInt() * 100 + 1;
-        int b = random.nextInt() * 100 + 1;
+        int a = random.nextInt(1, 1000);
+        int b = random.nextInt(1, 1000);
         Calculator calculator = new Calculator();
         assertThat(calculator.add(a, b)).isEqualTo(a + b);
         assertThat(calculator.subtract(a, b)).isEqualTo(a - b);
