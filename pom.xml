@@ -122,8 +122,9 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <configuration>
                     <includes>
-                        <include>com/example/**</include>
+                        <include>com/example/starter/**</include>
                     </includes>
+                    <!-- ignore tests and ITs - too much coverage noise -->
                     <excludes>
                         <exclude>com/example/**/*Test</exclude>
                         <exclude>com/example/**/*Test$*</exclude>
