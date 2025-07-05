@@ -16,10 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.example.starter;
+package com.example.starter.its;
 
+import com.example.starter.Calculator;
 import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
 import com.flowlogix.util.ShrinkWrapManipulator;
+import jakarta.inject.Inject;
 import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuiteDeployment;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit5.ArquillianExtension;
@@ -32,9 +34,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(ArquillianExtension.class)
 @ArquillianSuiteDeployment
 class StarterIT {
+    @Inject
+    Calculator calculator;
+
     @Test
     void sanityCheck() {
-        assertThat(true).isTrue();
+        assertThat(calculator.subtract(1, 1)).isZero();
     }
 
     @Deployment
