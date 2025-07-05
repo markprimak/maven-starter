@@ -38,10 +38,11 @@ class StarterIT {
     @Inject
     Calculator calculator;
 
+    private final Random random = new Random();
+
     @Test
     @SuppressWarnings("checkstyle:MagicNumber")
     void subtract() {
-        var random = new Random();
         int a = random.nextInt(1, 1000);
         int b = random.nextInt(1, 1000);
         assertThat(calculator.subtract(a, b)).isEqualTo(a - b);

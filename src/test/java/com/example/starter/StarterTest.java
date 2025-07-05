@@ -1,6 +1,5 @@
 package com.example.starter;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
@@ -12,34 +11,26 @@ class StarterTest {
 
     private final Calculator calculator = new Calculator();
     private final Random random = new Random();
-
-    private int a;
-    private int b;
-
-    @BeforeEach
-    @SuppressWarnings("checkstyle:MagicNumber")
-    void setUp() {
-        a = random.nextInt(1, 1000);
-        b = random.nextInt(1, 1000);
-    }
+    private final int a = random.nextInt(1, 1000);
+    private final int b = random.nextInt(1, 1000);
 
     @Test
-    void testAdditionWithRandomInputs() {
+    void additionWithRandomInputs() {
         assertThat(calculator.add(a, b)).isEqualTo(a + b);
     }
 
     @Test
-    void testSubtractionWithRandomInputs() {
+    void subtractionWithRandomInputs() {
         assertThat(calculator.subtract(a, b)).isEqualTo(a - b);
     }
 
     @Test
-    void testMultiplicationWithRandomInputs() {
+    void multiplicationWithRandomInputs() {
         assertThat(calculator.multiply(a, b)).isEqualTo(a * b);
     }
 
     @Test
-    void testDivisionAndDivisionByZero() {
+    void divisionAndDivisionByZero() {
         assertThat(calculator.divide(a, b)).isEqualTo(a / b);
 
         assertThatIllegalArgumentException()
