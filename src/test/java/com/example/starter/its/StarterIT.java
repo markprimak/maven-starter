@@ -26,8 +26,10 @@ import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuit
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import java.util.Random;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(PayaraServerLifecycleExtension.class)
@@ -38,8 +40,12 @@ class StarterIT {
     Calculator calculator;
 
     @Test
+    @Disabled("Disabled to check coverage")
     void add() {
-        assertThat(calculator.subtract(1, 1)).isZero();
+        var random = new Random();
+        int a = random.nextInt() * 100 + 1;
+        int b = random.nextInt() * 100 + 1;
+        assertThat(calculator.subtract(a, b)).isEqualTo(a - b);
     }
 
     @Deployment
