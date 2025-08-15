@@ -49,7 +49,6 @@ class IndexPageIT {
     @Deployment
     @SuppressWarnings("unused")
     static WebArchive deploy() {
-        return ShrinkWrapManipulator.createDeployment(WebArchive.class)
-                .addClass(IndexPageIT.class);
+        return ShrinkWrapManipulator.createDeployment(WebArchive.class);
     }
 }
