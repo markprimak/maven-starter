@@ -45,10 +45,4 @@ class IndexPageIT {
                 .until(d -> d.findElement(By.tagName("h1")));
         assertThat(h1).isNotNull();
     }
-
-    @Deployment
-    @SuppressWarnings("unused")
-    static WebArchive deploy() {
-        return ShrinkWrapManipulator.createDeployment(WebArchive.class);
-    }
 }
