@@ -37,17 +37,19 @@ class IndexPageIT {
     @Drone
     private WebDriver driver;
 
-    @Test
     @SuppressWarnings("checkstyle:MagicNumber")
+    @Test
     void hasH1() {
         driver.get("http://localhost:8080/index.xhtml");
         WebElement h1 = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
-            .until(d -> d.findElement(By.tagName("h1")));
+                .until(d -> d.findElement(By.tagName("h1")));
         assertThat(h1).isNotNull();
     }
 
     @Deployment
+    @SuppressWarnings("unused")
     static WebArchive deploy() {
-        return ShrinkWrapManipulator.createDeployment(WebArchive.class);
+        return ShrinkWrapManipulator.createDeployment(WebArchive.class)
+                .addClass(IndexPageIT.class);
     }
 }
