@@ -63,8 +63,5 @@ class IndexPageIT {
     static class IndexPage {
         @FindBy(how = How.TAG_NAME, using = "h1")
         WebElement h1;
-        IndexPage(WebDriver driver) {
-            PageFactory.initElements(driver, this);
-        }
     }
 }
