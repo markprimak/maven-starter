@@ -18,9 +18,7 @@
  */
 package com.example.starter.its;
 
-import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit5.ArquillianExtension;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.jboss.arquillian.drone.api.annotation.Drone;
@@ -29,7 +27,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
-import com.flowlogix.util.ShrinkWrapManipulator;
 
 @ExtendWith(PayaraServerLifecycleExtension.class)
 @ExtendWith(ArquillianExtension.class)
