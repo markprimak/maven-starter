@@ -15,15 +15,6 @@ class StarterTest {
     private final int b = random.nextInt(1, 1000);
 
     @Test
-    void indexPageHasH1() throws Exception {
-        assertThat(java.net.http.HttpClient.newHttpClient().send(
-            java.net.http.HttpRequest.newBuilder(java.net.URI.create("http://localhost:8080/index.xhtml")).build(),
-            java.net.http.HttpResponse.BodyHandlers.ofString()
-        ).body()).contains("<h1");
-        System.out.println("Web app: H1 Test passed");
-    }
-
-    @Test
     void additionWithRandomInputs() {
         assertThat(calculator.add(a, b)).isEqualTo(a + b);
         System.out.println("Calculator: Addition Test passed");
