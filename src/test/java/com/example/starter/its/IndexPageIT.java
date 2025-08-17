@@ -20,7 +20,6 @@ package com.example.starter.its;
 
 import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
 import com.flowlogix.util.ShrinkWrapManipulator;
-import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuiteDeployment;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.junit5.ArquillianExtension;
@@ -31,36 +30,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.jboss.arquillian.graphene.page.Location;
-import org.jboss.arquillian.graphene.page.Page;
-import org.jboss.arquillian.graphene.Graphene;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(PayaraServerLifecycleExtension.class)
 @ExtendWith(ArquillianExtension.class)
-@ArquillianSuiteDeployment
 class IndexPageIT {
     @Drone
     WebDriver browser;
 
-    @Page
-    IndexPage indexPage;
+    @FindBy(how = How.TAG_NAME, using = "h1")
+    WebElement h1;
 
     @Test
     void h1HasText() {
-        Graphene.goTo(IndexPage.class);
-        assertThat(indexPage.h1.getText()).isEqualTo("Heading for Starter Project");
+        browser.get("index.xhtml");
+        assertThat(h1.getText()).isEqualTo("Heading for Starter Project");
     }
 
     @Deployment
     @SuppressWarnings("unused")
     static WebArchive deploy() {
         return ShrinkWrapManipulator.createDeployment(WebArchive.class);
-    }
-
-    @Location("index.xhtml")
-    static class IndexPage {
-        @FindBy(how = How.TAG_NAME, using = "h1")
-        WebElement h1;
     }
 }
