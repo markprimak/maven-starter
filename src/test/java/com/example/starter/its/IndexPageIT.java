@@ -18,7 +18,7 @@
  */
 package com.example.starter.its;
 
-import com.flowlogix.testcontainers.AppServerLifecycle;
+import com.flowlogix.test.AppServerLifecycle;
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.test.api.ArquillianResource;
