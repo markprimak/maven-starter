@@ -19,20 +19,17 @@
 package com.example.starter.its;
 
 import com.example.starter.Calculator;
-import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
+import com.flowlogix.test.AppServerLifecycle;
 import com.flowlogix.util.ShrinkWrapManipulator;
 import jakarta.inject.Inject;
 import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuiteDeployment;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import java.util.Random;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(PayaraServerLifecycleExtension.class)
-@ExtendWith(ArquillianExtension.class)
+@AppServerLifecycle
 @ArquillianSuiteDeployment
 class StarterIT {
     @Inject

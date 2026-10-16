@@ -18,13 +18,11 @@
  */
 package com.example.starter.its;
 
-import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
+import com.flowlogix.test.AppServerLifecycle;
 import org.jboss.arquillian.drone.api.annotation.Drone;
-import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,9 +30,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.net.URL;
 
-@ExtendWith(PayaraServerLifecycleExtension.class)
-@ExtendWith(ArquillianExtension.class)
 @RunAsClient
+@AppServerLifecycle
 class IndexPageIT {
     @Drone
     WebDriver browser;
