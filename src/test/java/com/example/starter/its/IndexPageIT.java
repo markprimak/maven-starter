@@ -18,7 +18,7 @@
  */
 package com.example.starter.its;
 
-import com.flowlogix.testcontainers.PayaraServerLifecycleExtension;
+import com.flowlogix.testcontainers.AppServerLifecycle;
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.arquillian.container.test.api.RunAsClient;
@@ -32,9 +32,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.net.URL;
 
-@ExtendWith(PayaraServerLifecycleExtension.class)
-@ExtendWith(ArquillianExtension.class)
 @RunAsClient
+@AppServerLifecycle
 class IndexPageIT {
     @Drone
     WebDriver browser;
