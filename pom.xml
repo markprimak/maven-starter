@@ -107,6 +107,7 @@
                     </includes>
                     <!-- ignore tests and ITs - too much coverage noise -->
                     <excludes>
+                        <exclude>com/example/**/SampleEntity</exclude>
                         <exclude>com/example/**/*Test</exclude>
                         <exclude>com/example/**/*Test$*</exclude>
                         <exclude>com/example/**/*IT</exclude>
