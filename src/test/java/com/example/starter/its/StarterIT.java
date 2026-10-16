@@ -19,7 +19,7 @@
 package com.example.starter.its;
 
 import com.example.starter.Calculator;
-import com.flowlogix.testcontainers.AppServerLifecycle;
+import com.flowlogix.test.AppServerLifecycle;
 import com.flowlogix.util.ShrinkWrapManipulator;
 import jakarta.inject.Inject;
 import org.eu.ingwar.tools.arquillian.extension.suite.annotations.ArquillianSuiteDeployment;
