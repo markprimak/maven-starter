@@ -33,9 +33,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class SampleEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+public class SampleEntity {
     @Id
     @GeneratedValue
     @EqualsAndHashCode.Include
