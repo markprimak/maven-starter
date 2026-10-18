@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.example.starter;
+package com.example.starter.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
