@@ -18,7 +18,7 @@
     <properties>
         <!-- Override target java release -->
         <!-- <maven.compiler.release>25</maven.compiler.release> -->
-        <flowlogix.depchain.version>133</flowlogix.depchain.version>
+        <flowlogix.depchain.version>135</flowlogix.depchain.version>
         <flowlogix.version>11.7.3</flowlogix.version>
         <flowlogix.bom.version>52</flowlogix.bom.version>
         <shiro.version>3.0.1</shiro.version>
